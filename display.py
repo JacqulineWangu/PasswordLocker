@@ -43,9 +43,9 @@ def del_user(user):
 def main():
     print("\033[1;36;40m PASSWORD LOCKER App\n")
     print("")
-    done = input("Hello, welcome to Password Locker  whats your name? ")
+    done = input("Hello, welcome to Password Locker  what's your name? ")
     print("  ")
-    print("hello, " + done + ", To get you started kindly choose one of the following .")
+    print("hello, " + done + ", To get you started, kindly choose one of the following .")
     print(" ")
     print("\033[1;34;1m  Options On how to Get Started on Password Locker\n")
     print("")
