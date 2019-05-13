@@ -1,5 +1,5 @@
-import pyperclip
 from user import User
+import pyperclip
 
 #To add an account
 def create_contact(email,phone,first_name,last_name,password):
@@ -22,7 +22,7 @@ def find_user(number):
     return User.find_by_number(number)    
 
 def check_existing_user(number):
-     '''
+    '''
     Function that check if a user exists with that number and return a Boolean
     '''
     return User.user_exist(number)
@@ -37,7 +37,7 @@ def del_user(user):
     '''
     Function to delete a user
     '''
-user.delete_user()
+    user.delete_user()
 #------------------------------------------------------------
 
 def main():
@@ -56,7 +56,7 @@ def main():
 
     while True:
 
-          list =('''
+        list =('''
         1-Create new account
         2-Display accounts
         3-Search for accounts
@@ -89,11 +89,12 @@ def main():
             print("confirm password ...")
             password1 = input()
 
-
-            save_users(create_user(f_name,l_name,p_number,e_address,password)) # create and save new user.
-            print ('\n')
-            print(f"New User {f_name} {l_name} created")
-            print ('\n')
+            if password == password1:
+                create_user = User(f_name,l_name,p_number,e_address,password)
+                create_user.save_user() # create and save new user.
+                print ('\n')
+                print(f"New User {f_name} {l_name} created")
+                print ('\n')
 
         elif short_code == '2':
 
@@ -115,7 +116,7 @@ def main():
             print("Enter the number you want to search for")
 
             search_number = input()
-            if check_existing_users(search_number):
+            if check_existing_user(search_number):
                 search_user = find_user(search_number)
                 print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
@@ -133,5 +134,4 @@ def main():
 
 
 if __name__ == '__main__':
-
-main()
+    main()

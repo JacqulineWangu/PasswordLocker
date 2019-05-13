@@ -13,7 +13,7 @@ class User:
         self.last_name = last_name
         self.password = password
 
-         contact_list = [] # Empty contact list
+    contact_list = [] # Empty contact list
 
     # Init method up here
 
@@ -46,9 +46,9 @@ class User:
 
         for user in cls.user_list:
             if user.phone_number == number:
-return user
+                return user
 
- @classmethod
+    @classmethod
     def user_exist(cls,number):
         '''
         Method that checks if a user exists from the user list.
@@ -59,23 +59,22 @@ return user
         '''
         for user in cls.user_list:
             if user.phone_number == number:
-                    return True
-
+                return True
         return False
 
-  @classmethod
+    @classmethod
     def display_users(cls):
         '''
         method that returns the user list
         '''
         return cls.user_list
 
-@classmethod
+    @classmethod
     def display_user(cls):
         for user in cls.user_list:
-return user 
+            return user 
 
-@classmethod
+    @classmethod
     def copy_email(cls,number):
         user_found = User.find_by_number(number)
-pyperclip.copy(user_found.email)
+        pyperclip.copy(user_found.email)
