@@ -13,6 +13,8 @@ class User:
         self.last_name = last_name
         self.password = password
 
+         contact_list = [] # Empty contact list
+
     # # Init method up here
 
     # def save_user(self):
