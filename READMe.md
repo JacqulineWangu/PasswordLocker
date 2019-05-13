@@ -18,9 +18,14 @@ This application allows users to generate and store passwords for various accoun
 Run pip install -r requirements.txt to install all required libraries.
 
 ## BDD
-|  BEHAVIOUR                                      | INPUT                            |      OUTPUT                          |
-|-------------------------------------------------|----------------------------------|--------------------------------------|
-| 
+|  BEHAVIOUR                                      | INPUT   |                 OUTPUT                                           |
+|-------------------------------------------------|---------|------------------------------------------------------------------|
+| 1 Presented short code to Create User Account   | type 1  | Enter details as per the instructions                            |
+| 2 Presented short code to Display accounts      | type 2  | The various accounts get displayed                               |
+| 3 Presented short code to Search for accounts   | type 3  | Enter number for account you searching and they all get displayed|
+| 4 Presented short code to Exit Password-Locker  | type 4  | Enter number 4 then you exit the App                             |
+
+
 ## Known Bugs
 No bugs detected but incase of any bug contact me.
 
