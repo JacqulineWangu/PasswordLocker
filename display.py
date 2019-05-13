@@ -1,11 +1,12 @@
 import pyperclip
 from user import User
+
 #To add an account
-def create_contact(account,username,password):
+def create_contact(email,phone,first_name,last_name,password):
     '''
     Function to create a new account
     '''
-    new_user = User(account,username,password)
+    new_user = User(email,phone,first_name,last_name,password)
     return new_user
 #To save a user
 def save_user(user):
@@ -13,58 +14,124 @@ def save_user(user):
     Function to save user
     '''
     user.save_user()    
-def find_user(account):
-    return User.find_by_account(account)    
-def check_existing_user(account):
-    return User.user_exist(account)
+
+def find_user(number):
+    '''
+    Function that finds a user by number and returns the user
+    '''
+    return User.find_by_number(number)    
+
+def check_existing_user(number):
+     '''
+    Function that check if a user exists with that number and return a Boolean
+    '''
+    return User.user_exist(number)
+
 def display_users():
+    '''
+    Function that returns all the saved users
+    '''
     return User.display_users()
+
+def del_user(user):
+    '''
+    Function to delete a user
+    '''
+user.delete_user()
 #------------------------------------------------------------
+
 def main():
     print("\033[1;36;40m PASSWORD LOCKER App\n")
     print("")
-    prom = input("Hello, welcome to Password Locker  whats your name. ")
+    done = input("Hello, welcome to Password Locker  whats your name? ")
     print("  ")
-    print("hello, " + prom + ", To get you started up kindly choose one of the following .")
+    print("hello, " + done + ", To get you started kindly choose one of the following .")
     print(" ")
     print("\033[1;34;1m  Options On how to Get Started on Password Locker\n")
     print("")
     # print("\033[1;35;1m cc -> To Create an Account\n")
     # print("\033[1;35;1m Log -> To log in\n")
-    # print("\033[1;35;1m ex -> Exit\n")   
+    # print("\033[1;35;1m ex -> Exit\n")  
+
+
     while True:
-        print("Use these short codes : \n cc - create an account\n dc - display username\nfc -find a user\nex -exit the user list ")
-        print(" ")
-        short_code = input('Enter : ').lower().strip()
-        if short_code == 'cc':
-            print('To create a new account. ')
-            first_name = input("Enter the first name. ")
-            last_name = input("Enter your last name. ")
-            password = input("Enter your password. ")
-            print("\033[1;32;1m  \n")
-            print( first_name +" "+ last_name + " You have successfully signed in to Password Locker using password " + password)
-            print("-------------- ")
-            print("To save an account, Enter the respective credentials .  ")
-            print("--------------ssss.")
-            account = input("Enter the name of the account that you want to store. ")
-            username = input("Enter the username you are using.  ")
-            password = input("Enter your password.  ")
-            save_user(User(account, username, password ))
-            print("\033[1;31;1m You have successfully saved your Credentials \n")
-            # print(emoji.emojize('Python is :thumbs_up_sign:'))
-            print("\033[1;32;1m  \n")
-        elif short_code == "dc":
+
+          list =('''
+        1-Create new account
+        2-Display accounts
+        3-Search for accounts
+        4-Exit Password-Locker
+        ''')
+        print(list)
+        print("Use these short codes : 1 - create a new user, 2 - display users, 3 -find a user, 4 -exit the Password locker ")
+
+        short_code = input().lower()
+
+        if short_code == '1':
+            print("New User")
+            print("-"*10)
+
+            print ("First name ....")
+            f_name = input()
+
+            print("Last name ...")
+            l_name = input()
+
+            print("Phone number ...")
+            p_number = input()
+
+            print("Email address ...")
+            e_address = input()
+
+            print("Password ...")
+            password = input()
+
+            print("confirm password ...")
+            password1 = input()
+
+
+            save_users(create_user(f_name,l_name,p_number,e_address,password)) # create and save new user.
+            print ('\n')
+            print(f"New User {f_name} {l_name} created")
+            print ('\n')
+
+        elif short_code == '2':
+
             if display_users():
-                print("Here is a list of all your Accounts")
-                print("\n")
-                # for user in display_users():
-                user = User.display_user()
-                print("\033[1;37;1m  \n")
-                print(f"Site: {user.account} \n User Name: {user.username} \n Password: {user.password}")
-                    # print(user)
+                print("Here is a list of all your users")
+                print('\n')
+
+                for user in display_users():
+                    print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+
+                    print('\n')
+                else:
+                    print('\n')
+
+                    print('\n')
+
+        elif short_code == '3':
+
+            print("Enter the number you want to search for")
+
+            search_number = input()
+            if check_existing_users(search_number):
+                search_user = find_user(search_number)
+                print(f"{search_user.first_name} {search_user.last_name}")
+                print('-' * 20)
+
+                print(f"Phone number.......{search_user.phone_number}")
+                print(f"Email address.......{search_user.email}")
             else:
-                print("\033[1;32;1m  \n")
-                print(" ")
-                print("You don't seem to have any accounts created yet")
+                print("That user does not exist")
+
+        elif short_code == "4":
+            print("Bye .......")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
+
+
 if __name__ == '__main__':
-main() 
+
+main()
