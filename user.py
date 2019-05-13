@@ -15,23 +15,23 @@ class User:
 
          contact_list = [] # Empty contact list
 
-    # # Init method up here
+    # Init method up here
 
-    # def save_user(self):
+    def save_user(self):
 
-    #     '''
-    #     save_user method saves user objects into user_list
-    #     '''
+        '''
+        save_user method saves user objects into user_list
+        '''
 
-    #     User.user_list.append(self)
+        User.user_list.append(self)
 
 
-    # def delete_user(self):
+    def delete_user(self):
 
-    #     '''
-    #     delete_user method deletes a saved user from the user_list
-    #     '''
+        '''
+        delete_user method deletes a saved user from the user_list
+        '''
 
-    #     User.user_list.remove(self)
+        User.user_list.remove(self)
 
     
