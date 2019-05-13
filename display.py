@@ -90,7 +90,7 @@ def main():
             password1 = input()
 
             if password == password1:
-                create_user = User(f_name,l_name,p_number,e_address,password)
+                create_user = User(e_address,p_number,f_name,l_name,password)
                 create_user.save_user() # create and save new user.
                 print ('\n')
                 print(f"New User {f_name} {l_name} created")
@@ -127,7 +127,7 @@ def main():
                 print("That user does not exist")
 
         elif short_code == "4":
-            print("Bye .......")
+            print("Thank you for using our services. Welcome again .......")
             break
         else:
             print("I really didn't get that. Please use the short codes")
