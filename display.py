@@ -1,5 +1,6 @@
 from user import User
 import pyperclip
+from credentials import Credentials
 
 #To add an account
 def create_contact(email,phone,first_name,last_name,password):

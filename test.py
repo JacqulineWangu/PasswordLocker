@@ -1,5 +1,6 @@
 import unittest
 import pyperclip # Importing the unittest module
+from credentials import Credentials
 from user import User # Importing the user class
 
 class TestUser(unittest.TestCase):
@@ -59,9 +60,9 @@ class TestUser(unittest.TestCase):
         '''
         test_delete_user to test if we can remove a user from our user list
         '''
-        self.new_user.delete_user()
+        self.new_user.save_user()
         test_user = User("jaqarta1167@gmail.com","0707518860","MichiganMaine","Jaqarta",'wawoodz') # new user
-        test_user.delete_user()
+        test_user.save_user()
 
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)

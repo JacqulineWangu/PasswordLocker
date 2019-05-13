@@ -1,6 +1,8 @@
 import unittest
 import random
-class Credential:
+from user import User # Importing the user class
+
+class Credentials:
 	'''
 	Class to create  account credentials, generate passwords and save their information
 	'''
