@@ -18,16 +18,20 @@ This application allows users to generate and store passwords for various accoun
 Run pip install -r requirements.txt to install all required libraries.
 
 ## BDD
-|  BEHAVIOUR                                 | INPUT                        |      OUTPUT                      |
-|--------------------------------------------|------------------------------|----------------------------------|
+|  BEHAVIOUR                                      | INPUT                            |      OUTPUT                          |
+|-------------------------------------------------|----------------------------------|--------------------------------------|
 | 
 ## Known Bugs
-{Are there issues that have not yet been resolved that you want to let users know you know? Outline any issues that would impact use of your application. Share any workarounds that are in place. }
+No bugs detected but incase of any bug contact me.
+
 ## Technologies Used
-{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}
+Python 3.6.7
+
 ## Support and contact details
-{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}
+If you run into any issues or have questions, ideas or concerns please do contact or incase you want to make a contribution to the code.
+Mobile Number : 0707518860
+or emal me at jacqulinewangu@gmail.com
+
 ### License
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-Copyright (c) {year} **{List of contributors or company name}**
+This software is Licenced under MIT Licence Copyright 2018( JacqulineWangu)
   
