@@ -71,17 +71,17 @@ def main():
             print("New User")
             print("-"*10)
 
+            print("Email address ...")
+            e_address = input()
+
+            print("Phone number ...")
+            p_number = input()
+
             print ("First name ....")
             f_name = input()
 
             print("Last name ...")
             l_name = input()
-
-            print("Phone number ...")
-            p_number = input()
-
-            print("Email address ...")
-            e_address = input()
 
             print("Password ...")
             password = input()
