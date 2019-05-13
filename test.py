@@ -50,6 +50,10 @@ def tearDown(self):
             '''
 User.user_list = []
 
+def test_save_user(self):
+        self.new_user.save_user()
+self.assertEqual(len(User.user_list),1) 
+
 def test_delete_user(self):
         '''
         test_delete_user to test if we can remove a user from our user list
