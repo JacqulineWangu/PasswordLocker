@@ -1,9 +1,15 @@
 # Password Locker
+
 #### This application allows users to generate and store passwords for various accounts where they can also view various accounts and delete others that they dont want to keep, 2019
+
 #### Author
+
 **Jacquline Wangu**
+
 ## Project Description
+
 This application allows users to generate and store passwords for various accounts where they can also view various accounts and delete others that they dont want to keep. This project is created by a language called python and is ran in the terminal.
+
 ## Project Setup Installation Requirements
 * On GitHub, navigate to the main page of the repository.
 * Under the repository name, click Clone or download.
