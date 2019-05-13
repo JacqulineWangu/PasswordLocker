@@ -38,6 +38,25 @@ def setUp(self):
             objects to our contact_list 
             '''
             self.new_user.save_user() #saves the new user
+            test_user = User("jaqarta1167@gmail.com","0707518860","MichiganMaine","Jaqarta") # new user
             test_user.save_user()
             # test_user.save_contact()
             self.assertEqual(len(User.user_list),2) 
+
+# setup and class creation up here
+def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+User.user_list = []
+
+def test_delete_user(self):
+        '''
+        test_delete_user to test if we can remove a user from our user list
+        '''
+        self.new_user.save_user()
+        test_user = User("jaqarta1167@gmail.com","0707518860","MichiganMaine","Jaqarta") # new user
+        test_user.save_user()
+
+
+        self.assertEqual(len(User.user_list),2)
