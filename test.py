@@ -24,6 +24,20 @@ def setUp(self):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.account,"Facebook")
-        self.assertEqual(self.new_user.username,"MichiganMaine")
-        self.assertEqual(self.new_user.password,"wawoodz")
+        
+        self.assertEqual(self.new_user.email,"jaqarta1167@gmail.com")
+        self.assertEqual(self.new_user.phone_number,"0707518860")
+        self.assertEqual(self.new_user.first_name,"Jacquline")
+        self.assertEqual(self.new_user.last_name,"Wangu")
+        
+        
+
+        def test_save_multiple_user(self):
+            '''
+            test_save_multiple_contact to check if we can save multiple user
+            objects to our contact_list 
+            '''
+            self.new_user.save_user() #saves the new user
+            test_user.save_user()
+            # test_user.save_contact()
+            self.assertEqual(len(User.user_list),2) 
